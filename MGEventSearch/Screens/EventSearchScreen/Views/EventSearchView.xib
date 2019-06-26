@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventSearchView" customModule="MGEventSearch" customModuleProvider="target">
+            <connections>
+                <outlet property="errorView" destination="ath-7D-hEw" id="d47-20-Xvf"/>
+                <outlet property="tableView" destination="2fa-IS-myH" id="wB2-GB-G5h"/>
+                <outlet property="view" destination="bcw-tt-eCd" id="d9q-Sa-Eiv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bcw-tt-eCd">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ath-7D-hEw" customClass="ErrorView" customModule="MGEventSearch" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong. Check your connection." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Wtu-v2-Yj3">
+                            <rect key="frame" x="80" y="303" width="215" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Wtu-v2-Yj3" firstAttribute="leading" secondItem="ath-7D-hEw" secondAttribute="leading" constant="80" id="5Eh-IP-DgN"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wtu-v2-Yj3" secondAttribute="trailing" id="7QP-DV-VSE"/>
+                        <constraint firstItem="Wtu-v2-Yj3" firstAttribute="centerY" secondItem="ath-7D-hEw" secondAttribute="centerY" id="PBG-E2-c7K"/>
+                        <constraint firstItem="Wtu-v2-Yj3" firstAttribute="centerX" secondItem="ath-7D-hEw" secondAttribute="centerX" id="aak-DS-kyg"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="errorMessage" destination="Wtu-v2-Yj3" id="4PC-Z0-8Ro"/>
+                    </connections>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2fa-IS-myH">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ath-7D-hEw" firstAttribute="bottom" secondItem="tXW-cb-Ejd" secondAttribute="bottom" id="3qd-16-qm7"/>
+                <constraint firstItem="2fa-IS-myH" firstAttribute="trailing" secondItem="tXW-cb-Ejd" secondAttribute="trailing" id="GgJ-Pf-Wlw"/>
+                <constraint firstItem="ath-7D-hEw" firstAttribute="top" secondItem="tXW-cb-Ejd" secondAttribute="top" id="ItM-nQ-hfZ"/>
+                <constraint firstItem="ath-7D-hEw" firstAttribute="trailing" secondItem="tXW-cb-Ejd" secondAttribute="trailing" id="Lzm-dF-MoD"/>
+                <constraint firstItem="2fa-IS-myH" firstAttribute="bottom" secondItem="tXW-cb-Ejd" secondAttribute="bottom" id="hZw-MM-wye"/>
+                <constraint firstItem="2fa-IS-myH" firstAttribute="leading" secondItem="tXW-cb-Ejd" secondAttribute="leading" id="r5r-5N-GT4"/>
+                <constraint firstItem="2fa-IS-myH" firstAttribute="top" secondItem="tXW-cb-Ejd" secondAttribute="top" id="t4Q-nE-AVN"/>
+                <constraint firstItem="ath-7D-hEw" firstAttribute="leading" secondItem="tXW-cb-Ejd" secondAttribute="leading" id="wYI-4v-FXg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="tXW-cb-Ejd"/>
+        </view>
+    </objects>
+</document>
