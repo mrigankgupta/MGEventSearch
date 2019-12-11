@@ -1,0 +1,6 @@
+framework module Pods_MGEventSearchUITests {
+  umbrella header "Pods-MGEventSearchUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
